@@ -1,18 +1,16 @@
-const delay = time => new Promise(resolve => setTimeout(resolve, time))
+const pending = res => {
+  let done = false;
 
-const pending = async res => {
-  let done = false
-
-  while(!done){
-    res.write("");
-    await delay(300)
-  }
+  const id = setInterval(() => {
+    if (done) return clearInterval(id);
+    res.write('');
+  }, 300);
 
   return {
-    stop(){
-      done = true
+    stop() {
+      done = true;
     }
-  }
-}
+  };
+};
 
-module.exports = pending
+module.exports = pending;
