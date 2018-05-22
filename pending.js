@@ -3,7 +3,8 @@ const pending = res => {
 
   const id = setInterval(() => {
     if (done) return clearInterval(id);
-    res.write('');
+    console.log('pending...');
+    res.write(Buffer.from(' '));
   }, 300);
 
   return {

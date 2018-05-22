@@ -15,6 +15,7 @@
     startTimer(fiveMinutes, display);
     
     // Call fetch
+    // fetch("/import").then(res => res.text()).then(data => window.alert(data))
     fetch("/import").then(res => res.json()).then(data => window.alert(JSON.stringify(data)))
   })
 </script>
