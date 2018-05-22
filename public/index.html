@@ -1,0 +1,24 @@
+<body>
+  <h3>TEST IMPORT</h3>
+  <div>
+    <button id="importBtn">Import</button>
+    <div>Import func take more than 5 minutes to finish</div>
+    <div>Count down: <span id="time">05:00</span> minutes!</div>
+  </div>
+</body>
+<script src="timer.js"></script>
+<script>
+  window.importBtn.addEventListener("click", () => {
+    window.alert()
+    
+    // Timer notify
+    const fiveMinutes = 60 * 5
+    const display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+    
+    // Call fetch
+    fetch("/import").then(res => res.json()).then(data => window.alert(JSON.stringify(data)))
+  })
+</script>
+
+

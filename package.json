@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "opener": "^1.4.3"
+  },
+  "scripts": {
+    "start": "node demo.js"
+  }
+}
