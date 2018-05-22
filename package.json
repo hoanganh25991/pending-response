@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">=8.11.1"
+  },
   "dependencies": {
     "eslint": "^4.19.1",
     "express": "^4.16.3",
